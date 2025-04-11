@@ -13,7 +13,7 @@ const app = new Elysia()
 .post("/createuser", UserController.createUser)
 .post("/signin", UserController.signin)
 
-.listen(3000);
+.listen(process.env.PORT || 3000);
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
 );
